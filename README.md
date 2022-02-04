@@ -3,10 +3,10 @@
 </div>
 <h1 align="center">pandas Cheatsheet</h1>
 
-## What is NumPy?
-#### The Pandas library is built on NumPy and provides easy-to-use data structures and data analysis tools for the Python programming language.
+## What is pandas?
+#### The pandas library is built on NumPy and provides easy-to-use data structures and data analysis tools for the Python programming language.
 
-## Installing NumPy
+## Installing pandas
 ```
   pip install pandas
 ```
