@@ -866,20 +866,6 @@ df.head()
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -922,7 +908,6 @@ df.head()
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
@@ -950,20 +935,6 @@ df
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1012,7 +983,6 @@ df
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
@@ -1029,20 +999,6 @@ df
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1098,7 +1054,6 @@ df
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
@@ -1115,20 +1070,6 @@ df
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1177,7 +1118,6 @@ df
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
@@ -1194,20 +1134,6 @@ df
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1250,7 +1176,6 @@ df
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
@@ -1267,20 +1192,6 @@ df.sort_values(by=["Age"],ascending=True)
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1323,7 +1234,6 @@ df.sort_values(by=["Age"],ascending=True)
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
@@ -1336,20 +1246,6 @@ df.sort_values(by=["Age"],ascending=False)
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1392,7 +1288,6 @@ df.sort_values(by=["Age"],ascending=False)
     </tr>
   </tbody>
 </table>
-</div>
 
 
 ## Tutorial 
