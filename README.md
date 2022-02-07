@@ -855,6 +855,545 @@ df7
 
 ```
 
+# Add Row
+
+
+```python
+df = pd.read_csv('social.csv')
+df.head()
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>EstimatedSalary</th>
+      <th>Purchased</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>19</td>
+      <td>19000</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>35</td>
+      <td>20000</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>26</td>
+      <td>43000</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>27</td>
+      <td>57000</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>19</td>
+      <td>76000</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+data = {'Age':['90'],'EstimatedSalary':['500000'],'Purchased':['1']}
+data
+```
+
+
+
+
+    {'Age': ['90'], 'EstimatedSalary': ['500000'], 'Purchased': ['1']}
+
+
+
+
+```python
+df1 = pd.DataFrame(data)
+df1.to_csv('social.csv', mode='a', index=False, header=False)
+df = pd.read_csv('social.csv')
+df
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>EstimatedSalary</th>
+      <th>Purchased</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>19</td>
+      <td>19000</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>35</td>
+      <td>20000</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>26</td>
+      <td>43000</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>27</td>
+      <td>57000</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>19</td>
+      <td>76000</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>90</td>
+      <td>500000</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+# Add Column
+
+
+```python
+gender = ['F','M','M','F','M','F']
+df["Gender"] = gender
+df.to_csv('social.csv',mode='w', index=False, header=True)
+df
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>EstimatedSalary</th>
+      <th>Purchased</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>19</td>
+      <td>19000</td>
+      <td>0</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>35</td>
+      <td>20000</td>
+      <td>0</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>26</td>
+      <td>43000</td>
+      <td>0</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>27</td>
+      <td>57000</td>
+      <td>0</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>19</td>
+      <td>76000</td>
+      <td>0</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>90</td>
+      <td>500000</td>
+      <td>1</td>
+      <td>F</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+# Delete Row
+
+
+```python
+df = pd.read_csv('social.csv')
+df.drop(5,axis=0,inplace=True)
+df.to_csv('social.csv',mode='w', index=False, header=True)
+df
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>EstimatedSalary</th>
+      <th>Purchased</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>19</td>
+      <td>19000</td>
+      <td>0</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>35</td>
+      <td>20000</td>
+      <td>0</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>26</td>
+      <td>43000</td>
+      <td>0</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>27</td>
+      <td>57000</td>
+      <td>0</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>19</td>
+      <td>76000</td>
+      <td>0</td>
+      <td>M</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+# Delete Column
+
+
+```python
+df = pd.read_csv('social.csv')
+df.drop('EstimatedSalary',axis=1,inplace=True)
+df.to_csv('social.csv',mode='w', index=False, header=True)
+df
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>Purchased</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>19</td>
+      <td>0</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>35</td>
+      <td>0</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>26</td>
+      <td>0</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>27</td>
+      <td>0</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>19</td>
+      <td>0</td>
+      <td>M</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+# Sorting
+
+
+```python
+df = pd.read_csv('social.csv')
+
+# Ascending Order
+df.sort_values(by=["Age"],ascending=True)
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>Purchased</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>19</td>
+      <td>0</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>19</td>
+      <td>0</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>26</td>
+      <td>0</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>27</td>
+      <td>0</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>35</td>
+      <td>0</td>
+      <td>M</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+# Descending Order
+df.sort_values(by=["Age"],ascending=False)
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>Purchased</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>35</td>
+      <td>0</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>27</td>
+      <td>0</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>26</td>
+      <td>0</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>19</td>
+      <td>0</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>19</td>
+      <td>0</td>
+      <td>M</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 
 ## Tutorial 
 [Pandas Tutorial](https://youtu.be/RhEjmHeDNoA)
